@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elite Studio — Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ES
+            </div>
+
+            <div>
+                <h2>ELITE</h2>
+                <span>STUDIO</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#products" class="nav-item">
+                <span>▦</span>
+                Products
+            </a>
+
+            <a href="#add-product" class="nav-item">
+                <span>＋</span>
+                Add Product
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="admin-profile">
+
+                <div class="profile-avatar">
+                    A
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <small>Elite Studio</small>
+                </div>
+
+            </div>
+
+            <button id="logoutBtn" class="logout-btn">
+                <span>↪</span>
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <p class="eyebrow">
+                    ELITE STUDIO
+                </p>
+
+                <h1>
+                    Admin Dashboard
+                </h1>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    System Online
+                </div>
+
+                <div class="top-avatar">
+                    A
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card">
+
+            <div class="welcome-content">
+
+                <span class="gold-label">
+                    ✦ WELCOME BACK
+                </span>
+
+                <h2>
+                    Manage your <em>luxury collection.</em>
+                </h2>
+
+                <p>
+                    Add, edit and manage your lighting products
+                    from one premium dashboard.
+                </p>
+
+            </div>
+
+            <div class="welcome-symbol">
+                ✦
+            </div>
+
+        </section>
+
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ◈
+                </div>
+
+                <div>
+                    <span>Total Products</span>
+                    <strong id="totalProducts">—</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ★
+                </div>
+
+                <div>
+                    <span>Featured</span>
+                    <strong id="featuredProducts">—</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ₹
+                </div>
+
+                <div>
+                    <span>Collection</span>
+                    <strong>LIVE</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <span>System</span>
+                    <strong class="online-text">ACTIVE</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADD PRODUCT -->
+
+        <section class="content-card" id="add-product">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        PRODUCT MANAGEMENT
+                    </span>
+
+                    <h2>
+                        Add New Product
+                    </h2>
+
+                    <p>
+                        Create a new product for your Elite Studio collection.
+                    </p>
+                </div>
+
+                <div class="heading-number">
+                    01
+                </div>
+
+            </div>
+
+
+            <form id="productForm" class="product-form">
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Product Name</label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            placeholder="e.g. Royal Crystal Chandelier"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Price</label>
+
+                        <div class="price-input">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="productPrice"
+                                placeholder="25000"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Category</label>
+
+                        <select id="productCategory" required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="Chandeliers">
+                                Chandeliers
+                            </option>
+
+                            <option value="Pendant Lights">
+                                Pendant Lights
+                            </option>
+
+                            <option value="Wall Lights">
+                                Wall Lights
+                            </option>
+
+                            <option value="Outdoor Lights">
+                                Outdoor Lights
+                            </option>
+
+                            <option value="Ceiling Lights">
+                                Ceiling Lights
+                            </option>
+
+                            <option value="Spot Lights">
+                                Spot Lights
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Image URL</label>
+
+                        <input
+                            type="text"
+                            id="productImage"
+                            placeholder="https://..."
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Description</label>
+
+                    <textarea
+                        id="productDescription"
+                        rows="5"
+                        placeholder="Describe the product..."
+                    ></textarea>
+
+                </div>
+
+
+                <label class="featured-toggle">
+
+                    <input
+                        type="checkbox"
+                        id="featured"
+                    >
+
+                    <span class="custom-check"></span>
+
+                    <span>
+                        <strong>Featured Product</strong>
+                        <small>Show this product as a premium highlight</small>
+                    </span>
+
+                </label>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="submit"
+                        id="saveBtn"
+                        class="gold-btn"
+                    >
+                        <span>＋</span>
+                        Save Product
+                    </button>
+
+                    <button
+                        type="reset"
+                        class="cancel-btn"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- PRODUCTS -->
+
+        <section class="content-card products-card" id="products">
+
+            <div class="section-heading products-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        COLLECTION
+                    </span>
+
+                    <h2>
+                        Your Products
+                    </h2>
+
+                    <p>
+                        Manage your complete lighting collection.
+                    </p>
+
+                </div>
+
+                <div class="product-count">
+                    PRODUCTS
+                </div>
+
+            </div>
+
+
+            <div class="search-wrapper">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search your collection..."
+                >
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>PRODUCT</th>
+                            <th>NAME</th>
+                            <th>CATEGORY</th>
+                            <th>PRICE</th>
+                            <th>FEATURED</th>
+                            <th>ACTIONS</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="productTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="admin-footer">
+
+            <span>
+                © 2026 Elite Studio
+            </span>
+
+            <span>
+                Crafted for luxury lighting
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script type="module" src="./admin.js"></script>
+
+</body>
+</html>
