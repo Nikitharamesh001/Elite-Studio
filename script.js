@@ -188,7 +188,7 @@ function displayProducts(products) {
 
 <a
     href="https://wa.me/918088717407?text=${encodeURIComponent(
-        "Hi Megha Lights, I am interested in " +
+        "Hi Elite Studio, I am interested in " +
         product.name +
         ". Price: ₹" +
         (product.price || 0)
